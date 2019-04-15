@@ -6,7 +6,7 @@ def consolidate_cart(cart:[])
     item.each do |itemname, data|
       if my_hash[itemname] == nil
         my_hash[itemname] = data
-        my_hash[itemname][:count] = 1 
+        my_hash[itemname][:count] = 1
       else
         my_hash[itemname][:count] += 1
       end
@@ -59,7 +59,7 @@ end
 
 def checkout(cart: [], coupons: [])
   # code here
-end 
+end
   cart = consolidate_cart(cart:cart)
   cart = apply_coupons(cart:cart, coupons:coupons)
   cart = apply_clearance(cart:cart)
@@ -74,4 +74,3 @@ end
   end
   total
 end
-
